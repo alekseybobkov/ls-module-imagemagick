@@ -13,9 +13,11 @@ Add two parameters to getThumbnailPath, and image_url requests. Example:
 to:  
 	$product->getThumbnailPath(100, 100, true, $params = array('im_process'=>true, 'size_name'=>'cropped_100', 'cmd'=>'-resize 100x100^ -gravity center -extent 100x100'));
 	
-In order the module to process the thumbnail generating request, the im_process parameter should be TRUE. The command-line parameters should be passed through the cmd parameter. The size_name parameter is required for distinguishing the thumbnail files. It can be descriptive - for example "large_thumbnail". If a thumbnail with the specified size name already exists for the specified image, it will not be re-generated - the existing thumbnail will be returned.
+In order the module to process the thumbnail generating request, the **im_process** parameter should be TRUE. The command-line parameters should be passed through the **cmd** parameter. The **size_name** parameter is required for distinguishing the thumbnail files. It can be descriptive - for example "large_thumbnail". If a thumbnail with the specified size name already exists for the specified image, it will not be re-generated - the existing thumbnail will be returned.
 
-The function ignores the $width and $height values specified in the first two parameters of the getThumbnailPath() call, but takes into account the $returnJpeg (third) parameter. 
+The extension ignores the $width and $height values specified in the first two parameters of the getThumbnailPath() call, but takes into account the $returnJpeg (third) parameter.
+
+The extension uses pure ImageMagick commands. Please refer to [ImageMagick documentation](http://www.imagemagick.org/Usage/) for details.
 
 ## Technical
 
