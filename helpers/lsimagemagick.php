@@ -22,7 +22,7 @@
 			$dest_file = PATH_APP.$path;
 
 			if (file_exists($dest_file))
-				return root_url($path);
+				return $path;
 
 			try
 			{

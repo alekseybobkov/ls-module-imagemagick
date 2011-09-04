@@ -43,7 +43,7 @@
 				
 			$size_name = isset($params['size_name']) ? $params['size_name'] : 'default_size';
 
-			return root_url(LsImageMagick::process_image($file, $size_name, $params['cmd'], $returnJpeg));
+			return LsImageMagick::process_image($file, $size_name, $params['cmd'], $returnJpeg);
 		}
 	}
 ?>

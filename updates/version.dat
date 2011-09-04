@@ -1,1 +1,2 @@
-#1 Initial version
+#1 Initial version.
+#2 Removed unneeded root_url call (fixed the URL bug).
