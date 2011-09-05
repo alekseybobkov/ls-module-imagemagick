@@ -43,7 +43,13 @@
 				
 			$size_name = isset($params['size_name']) ? $params['size_name'] : 'default_size';
 
-			return LsImageMagick::process_image($file, $size_name, $params['cmd'], $returnJpeg);
+			try
+			{
+				return LsImageMagick::process_image($file, $size_name, $params['cmd'], $returnJpeg);
+			} catch (exception $ex)
+			{
+				return '/phproad/resources/images/thumbnail_error.gif';
+			}
 		}
 	}
 ?>

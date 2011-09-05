@@ -1,2 +1,3 @@
 #1 Initial version.
 #2 Removed unneeded root_url call (fixed the URL bug).
+#3 Improved error management.
